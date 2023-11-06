@@ -1,0 +1,36 @@
+// Task Day 3 : 
+// 1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+// 2. Create your own resume data in JSON format
+// 3. Read about the difference between window, screen, and document in javascript
+// 4. Codekata practice
+
+
+// learning from this task
+//for in is used to iterate on key of the object
+//for of is usedf to iterte on values of iteratable items like array, object , strings , map, sets
+//for each is array methos used to transverse through each element in array
+
+
+var sampleJson = {
+    "Id" : 1,
+    "Name" : "Sriram",
+    "Student_Id" : 999,
+    "Batch" : "Batch_48_Tamil",
+    "Assignment" : 3,
+};
+
+
+var e = Object.entries(sampleJson);
+
+var keyArray = Object.keys(sampleJson)
+
+
+for(var i = 0 ; i < keyArray.length ; i++) {
+    var key = keyArray[i];
+    console.log(key + ":" + sampleJson[key])}
+
+for( key in sampleJson){console.log(key  + ": " + sampleJson[key]); }
+
+for( var [key,value] of e) { console.log(key + ":" + value)}
+
+e.forEach((key,value) => console.log(key + ":" + value))
